@@ -1,6 +1,11 @@
 import React from "react";
+import { auth, logout } from "../../config/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+
 const Header = () => {
+  const [user] = useAuthState(auth);
+
   return (
     <nav
       className="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
@@ -58,11 +63,19 @@ const Header = () => {
           </ul>
 
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-            <li>
-              <Link className="nav-link" to={"/login"}>
-                <img src="images/user.svg" />
-              </Link>
-            </li>
+            {user ? (
+              <li>
+                <Link className="nav-link" onClick={logout} to="">
+                  Logout
+                </Link>
+              </li>
+            ) : (
+              <li>
+                <Link className="nav-link" to={"/login"}>
+                  <img src="images/user.svg" />
+                </Link>
+              </li>
+            )}
             <li>
               <Link className="nav-link" to={"/cart"}>
                 <img src="images/cart.svg" />

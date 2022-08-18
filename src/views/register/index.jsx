@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, registerWithEmailAndPassword } from "../../config/firebase";
 
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+  const register = () => {
+    if (!name) alert("Please enter name");
+    registerWithEmailAndPassword(name, email, password);
+  };
+
+  useEffect(() => {
+    if (loading) return;
+    if (user) navigate("/");
+    if (error) alert(error);
+  }, [loading, user, error]);
+
   return (
     <>
       <div className="untree_co-section">
@@ -19,6 +38,8 @@ const Register = () => {
                       className="form-control"
                       id="c_username"
                       name="c_username"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                 </div>
@@ -33,6 +54,8 @@ const Register = () => {
                       className="form-control"
                       id="c_email_address"
                       name="c_email_address"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -43,10 +66,12 @@ const Register = () => {
                       Password <span className="text-danger">*</span>
                     </label>
                     <input
-                      type="text"
+                      type="password"
                       className="form-control"
                       id="c_password"
                       name="c_password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
                 </div>
@@ -66,10 +91,19 @@ const Register = () => {
                   </label>
                 </div>
 
+                <div className="form-group">
+                  <p>
+                    Already have an account? <Link to="/login">Login</Link> now.
+                  </p>
+                </div>
+
                 <div className="form-group row">
                   <div className="col-md-12">
                     {/* <div class="form-group"> */}
-                    <button class="btn btn-black btn-lg py-3 btn-block">
+                    <button
+                      className="btn btn-black btn-lg py-3 btn-block mt-5"
+                      onClick={register}
+                    >
                       Register
                     </button>
                     {/* </div> */}

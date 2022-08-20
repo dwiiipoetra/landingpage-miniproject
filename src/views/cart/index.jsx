@@ -48,7 +48,7 @@ const Cart = () => {
                       <td>
                         <div
                           className="input-group mb-3 d-flex align-items-center quantity-container"
-                          style="max-width: 120px;"
+                          style={{ maxWidth: "120px" }}
                         >
                           <div className="input-group-prepend">
                             <button
@@ -99,7 +99,7 @@ const Cart = () => {
                       <td>
                         <div
                           className="input-group mb-3 d-flex align-items-center quantity-container"
-                          style="max-width: 120px;"
+                          style={{ maxWidth: "120px" }}
                         >
                           <div className="input-group-prepend">
                             <button
@@ -140,7 +140,7 @@ const Cart = () => {
             </form>
           </div>
 
-          {/* <div className="row">
+          <div className="row">
             <div className="col-md-6">
               <div className="row mb-5">
                 <div className="col-md-6 mb-3 mb-md-0">
@@ -154,9 +154,9 @@ const Cart = () => {
                   </button>
                 </div>
               </div>
-              <div className="row">
+              <div className="row mb-5">
                 <div className="col-md-12">
-                  <label className="text-black h4" for="coupon">
+                  <label className="text-black h4" htmlFor="coupon">
                     Coupon
                   </label>
                   <p>Enter your coupon code if you have one.</p>
@@ -214,7 +214,7 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

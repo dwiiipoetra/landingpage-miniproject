@@ -55,10 +55,10 @@ const Footer = () => {
               </a>
             </div>
             <p className="mb-4">
-              Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio
-              quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-              vulputate velit imperdiet dolor tempor tristique. Pellentesque
-              habitant
+              Furni is an e-commerce website focused on home and living
+              products. We focus on creating the best online shopping experience
+              for customers to get for affordable and value for money, high-end
+              luxurious products.
             </p>
 
             <ul className="list-unstyled custom-social">

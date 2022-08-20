@@ -76,11 +76,13 @@ const Header = () => {
                 </Link>
               </li>
             )}
-            <li>
-              <Link className="nav-link" to={"/cart"}>
-                <img src="images/cart.svg" />
-              </Link>
-            </li>
+            {user && (
+              <li>
+                <Link className="nav-link" to={"/cart"}>
+                  <img src="images/cart.svg" />
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>

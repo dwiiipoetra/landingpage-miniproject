@@ -30,7 +30,7 @@ const Checkout = () => {
               <h2 className="h3 mb-3 text-black">Billing Details</h2>
               <div className="p-3 p-lg-5 border bg-white">
                 <div className="form-group">
-                  <label for="c_country" className="text-black">
+                  <label htmlFor="c_country" className="text-black">
                     Country <span className="text-danger">*</span>
                   </label>
                   <select id="c_country" className="form-control">
@@ -47,7 +47,7 @@ const Checkout = () => {
                 </div>
                 <div className="form-group row">
                   <div className="col-md-6">
-                    <label for="c_fname" className="text-black">
+                    <label htmlFor="c_fname" className="text-black">
                       First Name <span className="text-danger">*</span>
                     </label>
                     <input
@@ -58,7 +58,7 @@ const Checkout = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label for="c_lname" className="text-black">
+                    <label htmlFor="c_lname" className="text-black">
                       Last Name <span className="text-danger">*</span>
                     </label>
                     <input
@@ -72,7 +72,7 @@ const Checkout = () => {
 
                 <div className="form-group row">
                   <div className="col-md-12">
-                    <label for="c_companyname" className="text-black">
+                    <label htmlFor="c_companyname" className="text-black">
                       Company Name{" "}
                     </label>
                     <input
@@ -86,7 +86,7 @@ const Checkout = () => {
 
                 <div className="form-group row">
                   <div className="col-md-12">
-                    <label for="c_address" className="text-black">
+                    <label htmlFor="c_address" className="text-black">
                       Address <span className="text-danger">*</span>
                     </label>
                     <input
@@ -109,7 +109,7 @@ const Checkout = () => {
 
                 <div className="form-group row">
                   <div className="col-md-6">
-                    <label for="c_state_country" className="text-black">
+                    <label htmlFor="c_state_country" className="text-black">
                       State / Country <span className="text-danger">*</span>
                     </label>
                     <input
@@ -120,7 +120,7 @@ const Checkout = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label for="c_postal_zip" className="text-black">
+                    <label htmlFor="c_postal_zip" className="text-black">
                       Posta / Zip <span className="text-danger">*</span>
                     </label>
                     <input
@@ -134,7 +134,7 @@ const Checkout = () => {
 
                 <div className="form-group row mb-5">
                   <div className="col-md-6">
-                    <label for="c_email_address" className="text-black">
+                    <label htmlFor="c_email_address" className="text-black">
                       Email Address <span className="text-danger">*</span>
                     </label>
                     <input
@@ -145,7 +145,7 @@ const Checkout = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label for="c_phone" className="text-black">
+                    <label htmlFor="c_phone" className="text-black">
                       Phone <span className="text-danger">*</span>
                     </label>
                     <input
@@ -160,7 +160,7 @@ const Checkout = () => {
 
                 <div className="form-group">
                   <label
-                    for="c_create_account"
+                    htmlFor="c_create_account"
                     className="text-black"
                     data-bs-toggle="collapse"
                     href="#create_an_account"
@@ -179,7 +179,10 @@ const Checkout = () => {
                         the page.
                       </p>
                       <div className="form-group">
-                        <label for="c_account_password" className="text-black">
+                        <label
+                          htmlFor="c_account_password"
+                          className="text-black"
+                        >
                           Account Password
                         </label>
                         <input
@@ -196,7 +199,7 @@ const Checkout = () => {
 
                 <div className="form-group">
                   <label
-                    for="c_ship_different_address"
+                    htmlFor="c_ship_different_address"
                     className="text-black"
                     data-bs-toggle="collapse"
                     href="#ship_different_address"
@@ -214,7 +217,7 @@ const Checkout = () => {
                   <div className="collapse" id="ship_different_address">
                     <div className="py-2">
                       <div className="form-group">
-                        <label for="c_diff_country" className="text-black">
+                        <label htmlFor="c_diff_country" className="text-black">
                           Country <span className="text-danger">*</span>
                         </label>
                         <select id="c_diff_country" className="form-control">
@@ -232,7 +235,7 @@ const Checkout = () => {
 
                       <div className="form-group row">
                         <div className="col-md-6">
-                          <label for="c_diff_fname" className="text-black">
+                          <label htmlFor="c_diff_fname" className="text-black">
                             First Name <span className="text-danger">*</span>
                           </label>
                           <input
@@ -243,7 +246,7 @@ const Checkout = () => {
                           />
                         </div>
                         <div className="col-md-6">
-                          <label for="c_diff_lname" className="text-black">
+                          <label htmlFor="c_diff_lname" className="text-black">
                             Last Name <span className="text-danger">*</span>
                           </label>
                           <input
@@ -258,7 +261,7 @@ const Checkout = () => {
                       <div className="form-group row">
                         <div className="col-md-12">
                           <label
-                            for="c_diff_companyname"
+                            htmlFor="c_diff_companyname"
                             className="text-black"
                           >
                             Company Name{" "}
@@ -274,7 +277,10 @@ const Checkout = () => {
 
                       <div className="form-group row  mb-3">
                         <div className="col-md-12">
-                          <label for="c_diff_address" className="text-black">
+                          <label
+                            htmlFor="c_diff_address"
+                            className="text-black"
+                          >
                             Address <span className="text-danger">*</span>
                           </label>
                           <input
@@ -298,7 +304,7 @@ const Checkout = () => {
                       <div className="form-group row">
                         <div className="col-md-6">
                           <label
-                            for="c_diff_state_country"
+                            htmlFor="c_diff_state_country"
                             className="text-black"
                           >
                             State / Country{" "}
@@ -312,7 +318,10 @@ const Checkout = () => {
                           />
                         </div>
                         <div className="col-md-6">
-                          <label for="c_diff_postal_zip" className="text-black">
+                          <label
+                            htmlFor="c_diff_postal_zip"
+                            className="text-black"
+                          >
                             Posta / Zip <span className="text-danger">*</span>
                           </label>
                           <input
@@ -327,7 +336,7 @@ const Checkout = () => {
                       <div className="form-group row mb-5">
                         <div className="col-md-6">
                           <label
-                            for="c_diff_email_address"
+                            htmlFor="c_diff_email_address"
                             className="text-black"
                           >
                             Email Address <span className="text-danger">*</span>
@@ -340,7 +349,7 @@ const Checkout = () => {
                           />
                         </div>
                         <div className="col-md-6">
-                          <label for="c_diff_phone" className="text-black">
+                          <label htmlFor="c_diff_phone" className="text-black">
                             Phone <span className="text-danger">*</span>
                           </label>
                           <input
@@ -357,7 +366,7 @@ const Checkout = () => {
                 </div>
 
                 <div className="form-group">
-                  <label for="c_order_notes" className="text-black">
+                  <label htmlFor="c_order_notes" className="text-black">
                     Order Notes
                   </label>
                   <textarea
@@ -376,7 +385,7 @@ const Checkout = () => {
                 <div className="col-md-12">
                   <h2 className="h3 mb-3 text-black">Coupon Code</h2>
                   <div className="p-3 p-lg-5 border bg-white">
-                    <label for="c_code" className="text-black mb-3">
+                    <label htmlFor="c_code" className="text-black mb-3">
                       Enter your coupon code if you have one
                     </label>
                     <div className="input-group w-75 couponcode-wrap">

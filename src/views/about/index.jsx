@@ -10,12 +10,13 @@ const About = () => {
               <div className="intro-excerpt">
                 <h1>About Us</h1>
                 <p className="mb-4">
-                  Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                  aliquet velit. Aliquam vulputate velit imperdiet dolor tempor
-                  tristique.
+                  Furni is an e-commerce website focused on home and living
+                  products. We focus on creating the best online shopping
+                  experience for customers to get for affordable and value for
+                  money, high-end luxurious products.
                 </p>
                 <p>
-                  <a href="" className="btn btn-secondary me-2">
+                  <a href="/shop" className="btn btn-secondary me-2">
                     Shop Now
                   </a>
                   <a href="#" className="btn btn-white-outline">
@@ -39,8 +40,11 @@ const About = () => {
             <div className="col-lg-6">
               <h2 className="section-title">Why Choose Us</h2>
               <p>
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
-                velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+                Furni aims to supply high quality, handmade, made to order,
+                high-end designer, urban living inspired furniture such as
+                chair, diningchair, arm chair, living room sofa, bedding, table,
+                dining table, console table and coffee table from Indonesia and
+                make it available for worldwide demand.
               </p>
 
               <div className="row my-5">

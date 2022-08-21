@@ -29,7 +29,7 @@ const Login = () => {
               <div className="p-3 p-lg-5 border bg-white">
                 <div className="form-group row">
                   <div className="col-md-12">
-                    <label for="c_email_address" className="text-black">
+                    <label htmlFor="c_email_address" className="text-black">
                       Email Address <span className="text-danger">*</span>
                     </label>
                     <input
@@ -49,7 +49,7 @@ const Login = () => {
 
                 <div className="form-group row">
                   <div className="col-md-12">
-                    <label for="c_password" className="text-black">
+                    <label htmlFor="c_password" className="text-black">
                       Password <span className="text-danger">*</span>
                     </label>
                     <input

@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../components/product/ProductCard";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  // state
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchProducts = () => {
+    setLoading(true);
+    fetch("https://630331acc6dda4f287c4e755.mockapi.io/api/v1/products")
+      .then((resp) => resp.json())
+      // .then((data) => console.log(data))
+      .then((data) => (setProducts(data), setLoading(false)))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  // show loading
+  const showLoading = () => (loading ? <h2>Loading...</h2> : "");
+
+  // show list products
+  const showListProduct = () =>
+    products.map((p, i) => (
+      <ProductCard key={i} image={p.image} name={p.name} price={p.price} />
+    ));
+
   return (
     <>
       <div className="hero">
@@ -37,6 +63,7 @@ const Home = () => {
         </div>
       </div>
 
+      {showLoading()}
       <div className="product-section">
         <div className="container">
           <div className="row">
@@ -54,24 +81,8 @@ const Home = () => {
                 </Link>
               </p>
             </div>
-
-            <ProductCard
-              image={"images/product-1.png"}
-              title={"Nordic Chair"}
-              price={"IDR 650.000"}
-            />
-
-            <ProductCard
-              image={"images/product-2.png"}
-              title={"Kruzo Aero Chair"}
-              price={"IDR 780.000"}
-            />
-
-            <ProductCard
-              image={"images/product-3.png"}
-              title={"Ergonomic Chair"}
-              price={"IDR 450.000"}
-            />
+            {/* show list products */}
+            {showListProduct()}
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../components/product/ProductCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,9 +19,9 @@ const Home = () => {
                   products.
                 </p>
                 <p>
-                  <a href="/shop" className="btn btn-secondary me-2">
+                  <Link to="/shop" className="btn btn-secondary me-2">
                     Shop Now
-                  </a>
+                  </Link>
                   <a href="#" className="btn btn-white-outline">
                     Explore
                   </a>
@@ -48,9 +49,9 @@ const Home = () => {
                 velit. Aliquam vulputate velit imperdiet dolor tempor tristique.{" "}
               </p>
               <p>
-                <a href="/shop" className="btn">
+                <Link to="/shop" className="btn">
                   Explore
-                </a>
+                </Link>
               </p>
             </div>
 
@@ -203,9 +204,9 @@ const Home = () => {
                 <li>Donec vitae odio quis nisl dapibus malesuada</li>
               </ul>
               <p>
-                <a href="/services" className="btn">
+                <Link to="/services" className="btn">
                   Explore
-                </a>
+                </Link>
               </p>
             </div>
           </div>

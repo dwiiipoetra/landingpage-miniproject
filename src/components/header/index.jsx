@@ -36,8 +36,8 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to={"/shop"}>
-                Shop
+              <Link className="nav-link" to={"/product"}>
+                Product
               </Link>
             </li>
             <li>
@@ -72,14 +72,14 @@ const Header = () => {
             ) : (
               <li>
                 <Link className="nav-link" to={"/login"}>
-                  <img src="images/user.svg" />
+                  <img src="/images/user.svg" />
                 </Link>
               </li>
             )}
             {user && (
               <li>
                 <Link className="nav-link" to={"/cart"}>
-                  <img src="images/cart.svg" />
+                  <img src="/images/cart.svg" />
                 </Link>
               </li>
             )}

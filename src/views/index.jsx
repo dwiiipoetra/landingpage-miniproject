@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/product/ProductCard";
 import { Link } from "react-router-dom";
+import fetchProducts from "../api/fetchProducts";
 
 const Home = () => {
   // state
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchProducts = () => {
-    setLoading(true);
-    fetch("https://630331acc6dda4f287c4e755.mockapi.io/api/v1/products")
-      .then((resp) => resp.json())
-      // .then((data) => console.log(data))
-      .then((data) => (setProducts(data), setLoading(false)))
-      .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  // show loading
-  const showLoading = () => (loading ? <h2>Loading...</h2> : "");
+  const { products } = fetchProducts(
+    "https://630331acc6dda4f287c4e755.mockapi.io/api/v1/products?page=1&limit=3"
+  );
 
   // show list products
   const showListProduct = () =>
     products.map((p, i) => (
-      <ProductCard key={i} image={p.image} name={p.name} price={p.price} />
+      <ProductCard
+        key={i}
+        image={p.image}
+        name={p.name}
+        price={p.price}
+        id={p.id}
+      />
     ));
 
   return (
@@ -45,7 +37,7 @@ const Home = () => {
                   products.
                 </p>
                 <p>
-                  <Link to="/shop" className="btn btn-secondary me-2">
+                  <Link to="/product" className="btn btn-secondary me-2">
                     Shop Now
                   </Link>
                   <a href="#" className="btn btn-white-outline">
@@ -63,7 +55,6 @@ const Home = () => {
         </div>
       </div>
 
-      {showLoading()}
       <div className="product-section">
         <div className="container">
           <div className="row">
@@ -76,7 +67,7 @@ const Home = () => {
                 velit. Aliquam vulputate velit imperdiet dolor tempor tristique.{" "}
               </p>
               <p>
-                <Link to="/shop" className="btn">
+                <Link to="/product" className="btn">
                   Explore
                 </Link>
               </p>

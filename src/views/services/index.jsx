@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../../components/product/ProductCard";
+import { Link } from "react-router-dom";
+import fetchProducts from "../../api/fetchProducts";
 
 const Services = () => {
+  // state
+  const { products } = fetchProducts(
+    "https://630331acc6dda4f287c4e755.mockapi.io/api/v1/products?page=1&limit=3"
+  );
+
+  // show list products
+  const showListProduct = () =>
+    products.map((p, i) => (
+      <ProductCard
+        key={i}
+        image={p.image}
+        name={p.name}
+        price={p.price}
+        id={p.id}
+      />
+    ));
+
   return (
     <>
       <div className="hero">
@@ -18,9 +37,9 @@ const Services = () => {
                   Indonesia and make it available for worldwide demand.
                 </p>
                 <p>
-                  <a href="/shop" className="btn btn-secondary me-2">
+                  <Link to="/product" className="btn btn-secondary me-2">
                     Shop Now
-                  </a>
+                  </Link>
                   <a href="#" className="btn btn-white-outline">
                     Explore
                   </a>
@@ -183,30 +202,15 @@ const Services = () => {
                 velit. Aliquam vulputate velit imperdiet dolor tempor tristique.{" "}
               </p>
               <p>
-                <a href="/shop" className="btn">
+                <Link to="/product" className="btn">
                   Explore
-                </a>
+                </Link>
               </p>
             </div>
             {/* <!-- End Column 1 --> */}
 
-            <ProductCard
-              image={"images/product-1.png"}
-              title={"Nordic Chair"}
-              price={"IDR 650.000"}
-            />
-
-            <ProductCard
-              image={"images/product-2.png"}
-              title={"Kruzo Aero Chair"}
-              price={"IDR 780.000"}
-            />
-
-            <ProductCard
-              image={"images/product-3.png"}
-              title={"Ergonomic Chair"}
-              price={"IDR 450.000"}
-            />
+            {/* show list products */}
+            {showListProduct()}
           </div>
         </div>
       </div>

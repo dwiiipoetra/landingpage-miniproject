@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -16,9 +17,9 @@ const About = () => {
                   money, high-end luxurious products.
                 </p>
                 <p>
-                  <a href="/shop" className="btn btn-secondary me-2">
+                  <Link to="/product" className="btn btn-secondary me-2">
                     Shop Now
-                  </a>
+                  </Link>
                   <a href="#" className="btn btn-white-outline">
                     Explore
                   </a>

@@ -4,9 +4,11 @@ import axios from "axios";
 export default function fetchProducts(url) {
   // state
   const [products, setProducts] = useState([]);
+  const [relatedProducts, setRelatedProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    //fetch all products
     (async function () {
       try {
         setLoading(true);
@@ -18,6 +20,17 @@ export default function fetchProducts(url) {
         setLoading(false);
       }
     })();
+
+    //fetch related products
+    (async function () {
+      try {
+        const response = await axios.get(url);
+        setRelatedProducts(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
   }, [url]);
-  return { products, loading };
+
+  return { products, relatedProducts, loading };
 }

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "RENÉ | Armchair By Meridiani",
+    "desc": "Directly deriving from René sofa, the small armchair is as welcoming as a nest, characterized by organic and rounded shapes as well. Featured by enveloping lines and harmonious proportions, whether for a conversation corner, a living area or a bedroom, this seat expresses its charm thanks to the upholstery - from soft leathers to the finest fabrics, which enhance its smooth curves.",
+    "price": 3500000,
+    "image": "https://img.edilportale.com/product-thumbs/b_armchair-meridiani-604919-relfee7703e.jpg",
+    "id": "1",
+    "category": "Armchair"
+  },
+  {
+    "name": "KAORI | Leather Armchair By Poliform",
+    "desc": "The Kaori armchair is a counterpoint to the Brera sofa, as well as to all the designs in the Sofas collection that have a strong architectural connotation. It is characterised by soft lines and generous volumes. Elegant and sophisticated, the armchair is made up of two perfectly integrated shells.",
+    "price": 3800000,
+    "image": "https://img.edilportale.com/product-thumbs/b_kaori-leather-armchair-poliform-596780-rel78489fb6.jpg",
+    "id": "2",
+    "category": "Armchair"
+  },
+  {
+    "name": "STRONG SPECIAL | Armchair By Desalto",
+    "desc": "The Strong collection offers a further, captivating testimony of its expressive richness through Strong Special, the new comfortable family of upholstered seats which, in natural design continuity with Strong, is characterized by an essential and consistent design, in perfect balance between comfort and solidity.",
+    "price": 2800000,
+    "image": "https://img.edilportale.com/product-thumbs/b_armchair-desalto-599092-rel204b99e9.jpg",
+    "id": "3",
+    "category": "Armchair"
+  },
+  {
+    "name": "BARCELONA® | Footstool By KNOLL",
+    "desc": "The polish steel frame is hand-buffed and hand-finished to a mirror finish. The cushions are upholstered with 16 individual panels cut, hand-welted and hand-tufted from a single hide. Side and edges of upholstery straps are dyed to match specified upholstery colour.",
+    "price": 4000000,
+    "image": "https://img.edilportale.com/product-thumbs/b_BARCELONA-Footstool-Knoll-International-403443-releb46b01c.jpg",
+    "id": "4",
+    "category": "Footstool"
+  },
+  {
+    "name": "YOKO | Footstool By Minotti",
+    "desc": "Yoko, a light and elegant seating design; a Japanese name and Scandinavian lines that come together in a piece of furniture with an aesthetic matrix, flavoured by both cultures. A contrast in constant equilibrium thanks to the skilful craftsmanship of the Japanese-Danish couple Inoda+Sveje.",
+    "price": 4500000,
+    "image": "https://img.edilportale.com/product-thumbs/b_footstool-minotti-599721-relf87f035e.jpg",
+    "id": "5",
+    "category": "Footstool"
+  },
+  {
+    "name": "ELEPHANT | Leather Footstool By NORR11",
+    "desc": "Elephant Stool comes with a seat of moulded oak veneer, resting on a wooden base of massive oak. The stool is available without upholstery as well as with different upholstery options. Elephant Stool is a minimal piece of furniture, based on the signature aesthetics of the Elephant Chair.",
+    "price": 3600000,
+    "image": "https://img.edilportale.com/product-thumbs/b_ELEPHANT-Leather-footstool-NORR11-438893-rel490e94b8.jpg",
+    "id": "6",
+    "category": "Footstool"
+  },
+  {
+    "name": "BOLLA By Filippo Ghezzani",
+    "desc": "Bolla is a pouf able to guarantee the elegance of a padded seat and the practicality of an ergonomic solution careful to the benefits on the posture of those using it. With a smart design and a customizable fabric, Bolla is light and thanks to the handle, it allows to freely furnish every corner of the house.",
+    "price": 4200000,
+    "image": "https://img.edilportale.com/product-thumbs/b_BOLLA-Filippo-Ghezzani-539365-rel722c5764.jpg",
+    "id": "7",
+    "category": "Sitting Ball"
+  },
+  {
+    "name": "SITTING BALL By JUMBO BAG",
+    "desc": "Discover the new alliance between the Art of Living and Wellness: the Sitting Ball, the new JumboBag inflatable gym ball. Its uses are multiple: use it in your office to improve your posture on a daily basis, use it as a gym ball for your abdominals, muscles of the lower back, gluteus and inner thighs, or for yoga postures.",
+    "price": 3950000,
+    "image": "https://img.edilportale.com/product-thumbs/b_SITTING-BALL-SAS-Solution-D-343941-rel1831eb7c.jpg",
+    "id": "8",
+    "category": "Sitting Ball"
+  },
+  {
+    "name": "APOLLO By Giorgetti",
+    "desc": "Wellness ball upholstered in hand-woven leather strips. Apollo can be deflated to make its carriage easier. It is a tool for fitness activity, but it can also be used as a furnishing accessory.",
+    "price": 4500000,
+    "image": "https://img.edilportale.com/product-thumbs/2b_APOLLO-GIORGETTI-337011-relfad2b595.jpg",
+    "id": "9",
+    "category": "Fitness Equipment"
+  },
+  {
+    "name": "BELT CORD OUTDOOR | Garden Sofa By Minotti",
+    "desc": "Belt Cord Outdoor is a 2 seater rope and fabric garden sofa. The enveloping and comfortable body of the Belt seats designed for indoor use in 2021 also shapes the outdoor version. The band which, in the original design, outlines the silhouette of the volume recalling the shape of a belt, in its outdoor version.",
+    "price": 7200000,
+    "image": "https://img.edilportale.com/product-thumbs/b_garden-sofa-minotti-599918-relf72e6d93.jpg",
+    "id": "10",
+    "category": "Garden Sofa"
+  },
+  {
+    "name": "ONSEN | Garden Sofa By GANDIABLASCO",
+    "desc": "Francesco Meda and David Quincoces are teaming up with GANDIABLASCO to design a collection destined to become an icon of timeless design. Young talent, innovation and the brands extensive background bring us a classic from the future. ONSEN is a collection of outdoor furniture of peaceful beauty where the most linear and essential is charged with uniqueness in every gesture.",
+    "price": 9500000,
+    "image": "https://img.edilportale.com/product-thumbs/b_onsen-2-seater-garden-sofa-gandia-blasco-605760-rel31baf32e.jpg",
+    "id": "11",
+    "category": "Garden Sofa"
+  },
+  {
+    "name": "TEMPS CALME OUTDOOR | Sofa By Roche Bobois",
+    "desc": "Modular sofa upholstered in outdoor fabrics padded Meridien and plain Meridien. Seat and back cushions in Dryfeel foam and polyester fibers. Structure in solid okoume and okoume plywood. HR elastic straps suspension.",
+    "price": 10250000,
+    "image": "https://img.edilportale.com/product-thumbs/b_temps-calme-outdoor-garden-sofa-roche-bobois-583032-rel7368587a.jpg",
+    "id": "12",
+    "category": "Garden Sofa"
+  }
+]

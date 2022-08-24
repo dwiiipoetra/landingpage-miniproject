@@ -12,9 +12,9 @@ const Header = () => {
       arial-label="Furni navigation bar"
     >
       <div className="container">
-        <a className="navbar-brand" href="index.html">
+        <Link className="navbar-brand" to={"/"}>
           Furni<span>.</span>
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -55,11 +55,11 @@ const Header = () => {
                 Contact Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="nav-link" to={"/checkout"}>
                 Checkout
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">

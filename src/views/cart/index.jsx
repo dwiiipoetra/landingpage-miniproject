@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const Cart = () => {
   // get data products from local storage
-  const productsCart = JSON.parse(localStorage.getItem("products"));
+  // const productsCart = JSON.parse(localStorage.getItem("products"));
   return (
     <>
       <div className="hero">
@@ -38,35 +38,35 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {productsCart.map((productCart, i) => (
-                      <tr key={i}>
-                        <td className="product-thumbnail">
-                          <img
-                            src={productCart.image}
-                            alt={productCart.name}
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td className="product-name">
-                          <h2 className="h5 text-black">{productCart.name}</h2>
-                        </td>
-                        <td>{formatRupiah(productCart.price)}</td>
-                        <td>
-                          <input
-                            className="text-center me-3"
-                            // className="form-control text-center me-3"
-                            id="inputQuantity"
-                            min="1"
-                            type="number"
-                            style={{ maxWidth: "4rem" }}
-                          />
-                        </td>
-                        <td>{formatRupiah(productCart.price)}</td>
-                        <td>
-                          <DeleteIcon />
-                        </td>
-                      </tr>
-                    ))}
+                    {/* {productsCart.map((productCart, i) => ( */}
+                    {/* <tr key={i}> */}
+                    <td className="product-thumbnail">
+                      <img
+                        src={productCart.image}
+                        alt={productCart.name}
+                        className="img-fluid"
+                      />
+                    </td>
+                    <td className="product-name">
+                      <h2 className="h5 text-black">{productCart.name}</h2>
+                    </td>
+                    {/* <td>{formatRupiah(productCart.price)}</td> */}
+                    <td>
+                      <input
+                        className="text-center me-3"
+                        // className="form-control text-center me-3"
+                        id="inputQuantity"
+                        min="1"
+                        type="number"
+                        style={{ maxWidth: "4rem" }}
+                      />
+                    </td>
+                    {/* <td>{formatRupiah(productCart.price)}</td> */}
+                    <td>
+                      <DeleteIcon />
+                    </td>
+                    {/* </tr> */}
+                    {/* ))} */}
                   </tbody>
                 </table>
               </div>

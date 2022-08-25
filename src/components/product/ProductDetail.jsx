@@ -5,8 +5,17 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import fetchProducts from "../../api/fetchProducts";
 import { onTop, formatRupiah } from "../../Helpers";
+//redux
+import { useDispatch } from "react-redux";
+import { addProductCart } from "../../redux/Counter/counter.actions";
 
 const ProductDetail = () => {
+  // call action from redux
+  const dispatch = useDispatch();
+  const [detailOrder, setDetailOrder] = useState({
+    quantity: 0,
+  });
+
   // get param from Router (in App.js)
   const { id } = useParams();
   const { products, loading } = fetchProducts(
@@ -29,20 +38,16 @@ const ProductDetail = () => {
 
   // add to cart
   const addToCart = (e) => {
-    // use js native
-    let productsCart = [];
-    if (localStorage.getItem("products")) {
-      productsCart = JSON.parse(localStorage.getItem("products"));
+    e.preventDefault();
+
+    const { quantity } = detailOrder;
+    const data = { ...products, quantity };
+    if (quantity === 0) {
+      alert("Please fill all field");
+    } else {
+      dispatch(addProductCart(data));
+      alert("Product added to cart");
     }
-    productsCart.push({
-      id: products.id,
-      name: products.name,
-      desc: products.desc,
-      category: products.category,
-      price: products.price,
-      image: products.image,
-    });
-    localStorage.setItem("products", JSON.stringify(productsCart));
   };
 
   return (
@@ -73,9 +78,16 @@ const ProductDetail = () => {
                 <input
                   className="form-control text-center me-3"
                   id="inputQuantity"
-                  min="1"
+                  min="0"
+                  defaultValue={0}
                   type="number"
                   style={{ maxWidth: "4rem" }}
+                  onChange={(e) =>
+                    setDetailOrder({
+                      ...detailOrder,
+                      quantity: Number(e.target.value),
+                    })
+                  }
                 />
                 <Link
                   className="btn btn-black btn-sm btn-block"

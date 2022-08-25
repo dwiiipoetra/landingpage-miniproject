@@ -1,6 +1,6 @@
-# Front End Mini Project at CAP Celerates 2022
+# Front End Mini Project ReactJS at CAP Celerates 2022
 
-E-Commerce Landing Page using ReactJS, Material UI, Axios & Firebase Auth
+E-Commerce Landing Page using Material UI, Axios & Firebase Auth
 
 ## Resource
 - [Vite](https://vitejs.dev)
@@ -9,6 +9,7 @@ E-Commerce Landing Page using ReactJS, Material UI, Axios & Firebase Auth
 - [Axios](https://github.com/axios/axios)
 - [Mock API](https://mockapi.io)
 - [Firebase](https://firebase.google.com/docs/auth)
+- [React](https://reactjs.org)
 - [React Firebase Hooks](https://www.npmjs.com/package/react-firebase-hooks)
 - [React Redux](https://react-redux.js.org)
 

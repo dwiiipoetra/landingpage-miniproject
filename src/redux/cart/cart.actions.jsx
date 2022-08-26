@@ -12,9 +12,9 @@ export const deleteProductCart = (data) => {
   };
 };
 
-export const editQuantityCart = (data) => {
+export const editQuantity = (data) => {
   return {
-    type: "EDIT_CART",
+    type: "EDIT_QUANTITY",
     value: data,
   };
 };

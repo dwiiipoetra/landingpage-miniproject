@@ -2,10 +2,21 @@ import React from "react";
 import { formatRupiah } from "../../Helpers";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { useSelector, useDispatch } from "react-redux";
+import { editQuantity } from "../../redux/cart/cart.actions";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const { data } = useSelector((state) => state.cart);
   // get data products from local storage
-  // const productsCart = JSON.parse(localStorage.getItem("products"));
+  const productsCart = JSON.parse(localStorage.getItem("cart"));
+
+  const handleChangeQuantity = (e, product) => {
+    console.log("product", product);
+    product.quantity = Number(e.target.value);
+    dispatch(editQuantity(product));
+  };
+
   return (
     <>
       <div className="hero">
@@ -38,35 +49,43 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {productsCart.map((productCart, i) => ( */}
-                    {/* <tr key={i}> */}
-                    <td className="product-thumbnail">
-                      <img
-                        src={productCart.image}
-                        alt={productCart.name}
-                        className="img-fluid"
-                      />
-                    </td>
-                    <td className="product-name">
-                      <h2 className="h5 text-black">{productCart.name}</h2>
-                    </td>
-                    {/* <td>{formatRupiah(productCart.price)}</td> */}
-                    <td>
-                      <input
-                        className="text-center me-3"
-                        // className="form-control text-center me-3"
-                        id="inputQuantity"
-                        min="1"
-                        type="number"
-                        style={{ maxWidth: "4rem" }}
-                      />
-                    </td>
-                    {/* <td>{formatRupiah(productCart.price)}</td> */}
-                    <td>
-                      <DeleteIcon />
-                    </td>
-                    {/* </tr> */}
-                    {/* ))} */}
+                    {data.map((productCart, i) => (
+                      <tr key={i}>
+                        <td className="product-thumbnail">
+                          <img
+                            src={productCart.image}
+                            alt={productCart.name}
+                            className="img-fluid"
+                          />
+                        </td>
+                        <td className="product-name">
+                          <h2 className="h5 text-black">{productCart.name}</h2>
+                        </td>
+                        <td>{formatRupiah(productCart.price)}</td>
+                        <td>
+                          <input
+                            className="text-center me-3"
+                            // className="form-control text-center me-3"
+                            id="inputQuantity"
+                            type="number"
+                            min="1"
+                            defaultValue={productCart.quantity}
+                            onChange={(e) =>
+                              handleChangeQuantity(e, productCart)
+                            }
+                            style={{ maxWidth: "4rem" }}
+                          />
+                        </td>
+                        <td>
+                          {formatRupiah(
+                            productCart.price * productCart.quantity
+                          )}
+                        </td>
+                        <td>
+                          <DeleteIcon />
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -118,14 +137,6 @@ const Cart = () => {
                       <h3 className="text-black h4 text-uppercase">
                         Cart Totals
                       </h3>
-                    </div>
-                  </div>
-                  <div className="row mb-3">
-                    <div className="col-md-6">
-                      <span className="text-black">Subtotal</span>
-                    </div>
-                    <div className="col-md-6 text-right">
-                      <strong className="text-black">$230.00</strong>
                     </div>
                   </div>
                   <div className="row mb-5">

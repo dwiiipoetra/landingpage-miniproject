@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+// custom hooks
+import fetchProducts from "../../api/fetchProducts";
+// helpers
+import { onTop, formatRupiah } from "../../Helpers";
+// material ui-loading
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
-import fetchProducts from "../../api/fetchProducts";
-import { onTop, formatRupiah } from "../../Helpers";
 //redux
 import { useDispatch } from "react-redux";
-import { addProductCart } from "../../redux/Counter/counter.actions";
+import { addProductCart } from "../../redux/cart/cart.actions";
 
 const ProductDetail = () => {
   // call action from redux
@@ -35,15 +38,14 @@ const ProductDetail = () => {
     ) : (
       ""
     );
-
   // add to cart
-  const addToCart = (e) => {
+  const handleCart = (e) => {
     e.preventDefault();
-
     const { quantity } = detailOrder;
     const data = { ...products, quantity };
+
     if (quantity === 0) {
-      alert("Please fill all field");
+      alert("Quantity cannot be zero");
     } else {
       dispatch(addProductCart(data));
       alert("Product added to cart");
@@ -93,7 +95,7 @@ const ProductDetail = () => {
                   className="btn btn-black btn-sm btn-block"
                   type="button"
                   to="/cart"
-                  onClick={addToCart}
+                  onClick={handleCart}
                 >
                   Add to cart
                 </Link>

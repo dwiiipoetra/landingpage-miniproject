@@ -1,9 +1,9 @@
 import { legacy_createStore as createStore } from "redux";
-import counterReducer from "./Counter/counter.reducer";
+import cartReducer from "./cart/cart.reducer";
 import { combineReducers } from "redux";
 
 const reducer = combineReducers({
-  counter: counterReducer,
+  cart: cartReducer,
 });
 
 function saveToLocalStorage(state) {

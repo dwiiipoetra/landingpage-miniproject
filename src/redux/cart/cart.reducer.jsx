@@ -16,13 +16,11 @@ const reducer = (state = INITIAL_STATE, action) => {
         data: state.data.filter((item) => item !== action.value),
       };
 
-    case "EDIT_CART":
+    case "EDIT_QUANTITY":
       return {
         ...state,
         data: state.data.map((item) =>
-          item.id === action.id
-            ? { ...content, quantity: action.value }
-            : content
+          item.id === action.id ? { ...item, quantity: action.value } : item
         ),
       };
 

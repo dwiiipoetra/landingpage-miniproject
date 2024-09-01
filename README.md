@@ -1,6 +1,6 @@
 # Front End Mini Project ReactJS at CAP Celerates 2022
 
-E-Commerce Landing Page using Material UI, Axios & Firebase Auth
+Here is an E-Commerce Landing Page project that contains pages such as home, product, about us, services, contact us. Some of the features in this application are a smooth and responsive display using Material UI, user authentication with Firebase Auth, product payment integration with Midtrans.
 
 ## Resource
 - [Vite](https://vitejs.dev)
